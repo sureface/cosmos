@@ -1,0 +1,71 @@
+.page-box-5 {
+  .swiper {
+    padding: 0 0.75rem;
+    max-width: 90rem;
+
+    .swiper-wrapper {
+      .swiper-slide {
+        padding: 3rem 2rem;
+        height: 70vh;
+
+        .swiper-content {
+          min-height: 22rem;
+          @extend %effect;
+          @extend %text;
+          height: 50vh;
+
+          .swiper-head {
+            background-color: #eee;
+            height: 15rem;
+            width: 100%;
+
+            img {
+              object-fit: cover;
+              height: 100%;
+              width: 100%;
+            }
+          }
+
+          .swiper-body {
+            height: calc(100% - 15rem);
+            padding: 1rem;
+
+            .swiper-text {
+              overflow-y: auto;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .swiper-pagination {
+      justify-content: center;
+      display: flex;
+
+      .swiper-pagination-bullet {
+        transition: 500ms ease-in-out background-color;
+        box-shadow: inset 0 0 0 0.16rem #fff;
+        margin: 0 0.5rem;
+        height: 1.6rem;
+        width: 1.6rem;
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: $bg_color;
+      }
+    }
+
+    @media (max-width: 1440px) {
+      max-width: 75rem;
+    }
+
+    @media (max-width: 1099px) {
+      max-width: 50rem;
+    }
+
+    @media (max-width: 767px) {
+      max-width: 27rem;
+    }
+  }
+}

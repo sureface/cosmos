@@ -1,0 +1,66 @@
+.page-box-2 {
+  padding: 0 2.5rem;
+
+  .swiper {
+    height: calc(94% - 5rem);
+    max-width: 70rem;
+    width: 100%;
+
+    .swiper-slide {
+      @extend %effect;
+      padding: 1rem;
+      height: 30vh;
+
+      .swiper-content {
+        display: flex;
+
+        .swiper-img-box {
+          @extend %effect;
+          max-width: 7rem;
+          min-width: 7rem;
+          display: flex;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .swiper-title {
+          justify-content: center;
+          align-items: center;
+          font-size: 1.25rem;
+          display: flex;
+          flex-grow: 1;
+        }
+      }
+
+      .swiper-text {
+        max-height: calc(100% - 4rem);
+        overflow-y: auto;
+        padding: 1rem 0;
+        @extend %text;
+      }
+    }
+
+    @media (max-width: 767px) {
+      max-width: 30rem;
+    }
+  }
+
+  .swiper-pagination {
+    justify-content: center;
+    display: flex;
+
+    .swiper-pagination-bullet {
+      transition: 500ms ease-in-out background-color;
+      box-shadow: inset 0 0 0 0.16rem #fff;
+      margin: 0 0.5rem;
+      height: 1.6rem;
+      width: 1.6rem;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #abfa;
+    }
+  }
+}

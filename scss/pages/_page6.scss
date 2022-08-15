@@ -1,0 +1,91 @@
+.page-box-6 {
+  position: relative;
+  padding: 0 1rem;
+
+  .swiper {
+    max-width: 85rem;
+
+    .swiper-wrapper {
+      .swiper-slide {
+        padding: 3rem 2rem;
+        height: 70vh;
+
+        .swiper-content {
+          min-height: 22rem;
+          @extend %effect;
+          height: 50vh;
+
+          .swiper-head {
+            background-color: #eee;
+            height: 11rem;
+            width: 100%;
+
+            img {
+              object-fit: cover;
+              height: 100%;
+              width: 100%;
+            }
+          }
+
+          .swiper-body {
+            justify-content: space-between;
+            height: calc(100% - 11rem);
+            flex-direction: column;
+            display: flex;
+            padding: 1rem;
+
+            .swiper-text {
+              
+              h3 {
+                text-align: center;
+                margin: 0;
+              }
+              
+              p {
+                @extend %text;
+              }
+            }
+
+            .swiper-more {
+              padding-right: 0.5rem;
+              justify-content: end;
+              display: flex;
+
+              a {
+                padding: 0.5rem 1.5rem;
+                @extend %effect;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1550px) {
+      max-width: 75rem;
+    }
+
+    @media (max-width: 1440px) {
+      max-width: 70rem;
+    }
+
+    @media (max-width: 1299px) {
+      max-width: 50rem;
+    }
+
+    @media (max-width: 929px) {
+      max-width: 30rem;
+    }
+
+    @media (max-width: 929px) {
+      max-width: 30rem;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 5vw;
+  }
+  .swiper-button-next {
+    right: 5vw;
+  }
+}

@@ -1,0 +1,153 @@
+.page-box-4 {
+  padding: 0 2.5rem;
+
+  .contact-wrapper {
+    grid-template-columns: 21rem auto;
+    margin: 2rem auto 0;
+    max-width: 67.5rem;
+    display: grid;
+    @extend %text;
+    gap: 5vw;
+
+    .contacts {
+      @extend %effect;
+
+      .contact {
+        .contact-box {
+          align-items: center;
+          padding: 1rem 0.5rem;
+          display: flex;
+
+          .contact-img-box {
+            background-color: #eee;
+            justify-content: center;
+            border-radius: 0.3rem;
+            align-items: center;
+            overflow: hidden;
+            max-height: 5rem;
+            min-height: 5rem;
+            min-width: 5rem;
+            max-width: 5rem;
+            display: flex;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          .contact-content {
+            padding: 1rem;
+            flex-grow: 1;
+
+            a {
+              color: cadetblue;
+            }
+          }
+        }
+      }
+
+      .map {
+        @extend %effect;
+        height: 10.5rem;
+        margin: auto;
+        width: 95%;
+      }
+    }
+
+    form {
+      .form-child {
+        display: grid;
+
+        &:not(:last-child) {
+          padding-bottom: 1.5rem;
+        }
+
+        .select {
+          position: relative;
+
+          .select-head {
+            cursor: pointer;
+            width: 100%;
+
+            &:focus ~ .select-body {
+              height: auto;
+            }
+          }
+
+          .select-body {
+            backdrop-filter: blur(0.6rem);
+            top: calc(100% + 0.5rem);
+            position: absolute;
+            overflow: hidden;
+            @extend %effect;
+            z-index: 1;
+            height: 0;
+            right: 0;
+            left: 0;
+
+            label {
+              transition: 200ms ease-in-out background-color;
+              justify-content: space-between;
+              padding: 0.75rem 1rem;
+              align-items: center;
+              position: relative;
+              cursor: pointer;
+              display: flex;
+              z-index: 1;
+
+              &:hover {
+                background-color: #abf6;
+              }
+
+              .select-label {
+              }
+
+              [type="radio"] {
+                opacity: 0.75;
+              }
+            }
+          }
+        }
+
+        .select-head,
+        input,
+        textarea,
+        button {
+          transition: 200ms ease-in-out background-color;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 1.1rem;
+          @extend %effect;
+          padding: 1rem;
+          color: #fff;
+          border: none;
+
+          &:focus {
+            background-color: #abf6;
+          }
+        }
+
+        textarea {
+          height: 7rem;
+        }
+
+        button {
+          margin-top: 1.5rem;
+          cursor: pointer;
+        }
+      }
+    }
+
+    @media (max-width: 750px) {
+      grid-template-columns: 30rem;
+      justify-content: center;
+
+      .contacts {
+        display: none;
+      }
+    }
+
+    @media (max-width: 550px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
